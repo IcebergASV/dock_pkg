@@ -149,6 +149,10 @@ include_directories(
 #   ${catkin_LIBRARIES}
 # )
 
+add_executable(dock_pkg_node src/dock_pkg_ctrl.cpp)
+target_link_libraries(dock_pkg_node ${catkin_LIBRARIES})
+add_dependencies(dock_pkg_node ${catkin_EXPORTED_TARGETS} ${${PROJECT_NAME}_EXPORTED_TARGETS})
+
 #############
 ## Install ##
 #############

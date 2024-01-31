@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+
+  <node name="dock_pkg_ctrl" pkg="dock_pkg" type="dock_pkg" output="screen">
+    <rosparam file="$(find dock_pkg)/config/sim_params.yaml" command="load" />
+    <remap from="/scan" to="/laser/scan"/>
+  </node>
+
+</launch>
